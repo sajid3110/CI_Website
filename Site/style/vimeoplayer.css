@@ -1,0 +1,154 @@
+
+
+
+  .story-content
+  {
+
+
+  position: relative;
+
+
+    /* padding:0px 220px; */
+  }
+
+
+  .story-content p
+  {
+  font-weight: 500;
+  font-size: 20px;
+  display: block;
+  padding-left: 8%;
+  padding-right:  8%;
+  }
+
+  #story{
+
+
+
+    margin-top:  50px;
+  }
+  #videodiv  {
+       position: relative;
+
+    }
+
+
+
+
+
+  @media (max-width: 1200px) {
+
+    .story-content p
+    {
+
+    padding-left:1%;
+    padding-right:1%;
+    }
+
+
+  }
+  @media (min-width: 1200px) {
+
+    .story-content p
+    {
+
+    padding-left:8%;
+    padding-right:8%;
+    }
+  }
+
+    @media (max-width: 1024px) {
+
+      .story-content p
+      {
+
+    font-size: 22px;
+      }
+
+
+    }
+
+    @media (max-width: 800px) {
+
+      .story-content p
+      {
+
+    font-size: 20px;
+      }
+
+
+    }
+
+    @media (max-width: 550px) {
+
+      .story-content p
+      {
+
+    font-size: 18px;
+      }
+
+
+    }
+    @media (min-width: 300px) and (max-width: 400px) {
+
+      .story-content p
+      {
+
+    font-size: 25px;
+      }
+
+
+    }
+
+    @media (max-width: 1024px) {
+
+
+
+
+    iframe{
+
+      /* display: block; */
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+    }
+   }
+
+
+  @media (max-width: 1200px) {
+
+
+          #playerholder{
+            /* position: absolute; */
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+
+          }
+          iframe{
+
+            display: block;
+        		  width: 100vw;
+        		  height: 100%;
+        		  object-fit: contain;
+          }
+  }
+  	  @media (min-width: 1201px) {
+
+
+
+      #playerholder{
+
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      }
+      iframe{
+
+        display: block;
+    		  width: 100vw;
+    		  height: 100vh;
+    		  object-fit: contain;
+      }
+  }

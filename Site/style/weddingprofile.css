@@ -1,0 +1,208 @@
+section{
+
+
+
+	width: 100%;
+	 min-height:100vh;
+	position: relative;
+padding-bottom: 10%;
+}
+
+.wthree_title_agile{
+	text-align:center;
+	position:relative;
+padding-top: 35px;
+}
+.wthree_title_agile p{
+	font-size:3em;
+	    color: #fc3158;
+	position:relative;
+}
+.wthree_title_agile p:before,.wthree_title_agile p:after{
+	    content: '';
+    background: #212121;
+    height: 2px;
+    width: 30%;
+    position: absolute;
+    top:50%;
+}
+.wthree_title_agile p:before{
+	left:41%;
+}
+.wthree_title_agile p:after{
+	right:41%;
+}
+.image-gallery{
+
+position: relative;
+margin-top: 50px;
+
+}
+
+.image-gallery img{
+
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-bottom: 5px;
+}
+
+
+.image-wedimg{
+
+
+
+
+margin-top:50px;
+
+
+
+}
+.story-content
+{
+
+
+position: relative;
+
+
+  /* padding:0px 220px; */
+}
+
+
+.story-content p
+{
+font-weight: 500;
+font-size: 20px;
+display: block;
+padding-left: 8%;
+padding-right:  8%;
+}
+
+#story{
+
+
+
+  margin-top:  50px;
+}
+#wedimg  {
+     position: relative;
+
+  }
+
+#wedimg h1 {
+  color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 65px;
+      text-transform: none;
+      text-align: center;
+
+  }
+
+
+
+@media (max-width: 1200px) {
+
+  .story-content p
+  {
+
+  padding-left:1%;
+  padding-right:1%;
+  }
+
+
+}
+@media (min-width: 1200px) {
+
+  .story-content p
+  {
+
+  padding-left:8%;
+  padding-right:8%;
+  }
+}
+
+  @media (max-width: 1024px) {
+
+    .story-content p
+    {
+
+  font-size: 22px;
+    }
+
+
+  }
+
+  @media (max-width: 800px) {
+
+    .story-content p
+    {
+
+  font-size: 20px;
+    }
+
+
+  }
+
+  @media (max-width: 550px) {
+
+    .story-content p
+    {
+
+  font-size: 18px;
+    }
+
+
+  }
+  @media (min-width: 300px) and (max-width: 400px) {
+
+    .story-content p
+    {
+
+  font-size: 25px;
+    }
+
+
+  }
+
+
+
+	  @media (min-width: 1025px) {
+	#wedimg img{
+		display: block;
+		  width: 100vw;
+		  height: 100vh;
+		  object-fit: cover;
+
+	  }
+}
+
+
+@media  (max-width: 400px)
+{
+ #wedimg h1 {
+    font-size: 20px;
+}
+}
+@media (min-width: 401px) and (max-width: 500px)
+{
+#wedimg h1 {
+    font-size: 30px;
+}
+}
+@media (min-width: 501px) and (max-width: 650px)
+{
+#wedimg h1 {
+    font-size: 45px;
+}
+}
+@media (min-width: 651px) and (max-width: 750px)
+{
+#wedimg h1 {
+    font-size: 55px;
+}
+}

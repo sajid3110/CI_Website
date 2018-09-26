@@ -1,0 +1,138 @@
+@media (max-width: 1200px)
+{
+
+	*
+	{
+		text-shadow: none !important;
+	}
+
+	body,input,textarea,select
+	{
+		line-height: 1.5em;
+		font-size: 12pt;
+		letter-spacing: 0;
+	}
+
+	h2, h3, h4, h5, h6
+	{
+		font-size: 1em;
+	}
+
+	h2
+	{
+		font-size: 40px;
+		letter-spacing: 4px;
+	}
+
+
+p{
+	font-size:30px;
+
+}
+
+
+	/* Box */
+
+		.box
+		{
+			margin-top: 4.5em;
+		}
+
+			.box:after
+			{
+				top: -4.5em;
+				height: 4.5em;
+			}
+
+			.box:before
+			{
+				width: 45px;
+				height: 33px;
+				top: -2.25em;
+				margin-left: -22.5px;
+				margin-top: -16.5px;
+				background-size: 45px 33px;
+			}
+
+			.box.style1
+			{
+				padding: 0;
+				text-align: center;
+			}
+
+				.box.style1 .image
+				{
+					position: relative !important;
+					left: 0 !important;
+					width: 100% !important;
+					height: auto !important;
+				}
+
+					.box.style1 .image img
+					{
+						position: relative;
+						height: auto;
+						width: 100%;
+					}
+
+				.box.style1 .inner
+				{
+					margin: 0 !important;
+					padding: 2em 1.25em 2em 1.25em !important;
+				}
+
+			.box.style2
+			{
+			}
+
+				.box.style2 .inner
+				{
+				}
+
+					.box.style2 .inner .row
+					{
+					}
+
+						.box.style2 .inner .row:before
+						{
+							display: none;
+						}
+
+					.box.style2 .inner .image
+					{
+						padding: 0;
+						max-width: 250px;
+						margin: 0 auto 20px auto;
+					}
+
+			.box.style3
+			{
+				padding: 2em 1.25em 2em 1.25em;
+			}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
+		padding: 6em 0 6em 0;
+
+	}
+
+		#header header
+		{
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+
+			#header header h1
+			{
+				font-size: 30px;
+				letter-spacing: 6px;
+			}
+
+
+
+
+}

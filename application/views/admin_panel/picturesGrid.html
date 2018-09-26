@@ -1,0 +1,249 @@
+<div ng-controller="PController">
+	<div ng-if="showSuccess" class="margin-top-20 padding-top-20">
+		<div class="margin-btm-none alert alert-success">
+			<strong>Success!</strong>
+		</div>
+	</div>
+	<div ng-if="showDanger" class="margin-top-20 padding-top-20">
+		<div class="margin-btm-none alert alert-danger">
+			<strong>{{ errorMsg }}</strong>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="table-wrapper">
+			<div class="table-title">
+				<div class="row">
+					<div class="col-sm-6">
+						<h2>Pictures</b>
+						</h2>
+					</div>
+					<div class="col-sm-6">
+						<a href="" ng-click="clearData();" class="btn btn-yellow" data-toggle="modal" data-target="#addPicturesModal">
+							<i class="material-icons">&#xE147;</i>
+							<span>Add New Picture</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 form-group">
+				<div class="col-sm-4 padd-left-none">
+					<input type="text" placeholder="Search" ng-model="searchName" class="form-control" required>
+				</div>
+				<div class="col-sm-1">
+					<button ng-disabled="searchName == ''" ng-click="search();" class="btn btn-sm btn-success">Search</button>
+				</div>
+				<div class="col-sm-1">
+					<button ng-disabled="searchName == ''" ng-click="searchName = '';search();" class="btn btn-sm btn-primary">Reset</button>
+				</div>
+			</div>
+			<table class="table table-striped table-hover" id="data_grid">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Comment</th>
+						<th>Category</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-show="mydata.data.length > 0" dir-paginate="value in mydata.data|itemsPerPage:mydata.itemsPerPage" total-items="mydata.total_count">
+						<td class="col-sm-3">{{ value.name }}</td>
+						<td class="col-sm-4">{{ value.comment }}</td>
+						<td class="col-sm-2">{{ value.category_name }}</td>
+						<td class="col-sm-3">
+							<a href="" ng-click="edit(value);" class="edit" data-toggle="modal" data-target="#editPicturesModal">
+								<i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+							</a>
+							<a href="" ng-click="edit(value);" class="delete" data-toggle="modal" data-target="#deletePicturesModal">
+								<i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+							</a>
+							<a href="" ng-click="edit(value);getAlbumList();" data-toggle="modal" data-target="#albumPicturesModal">
+								<i class="material-icons" data-toggle="tooltip" title="Add to Album">album</i>
+							</a>
+							<a href="" ng-click="edit(value);" data-toggle="modal" data-target="#setForCategoryModal">
+								<i class="material-icons" data-toggle="tooltip" title="Assign to category">category</i>
+							</a>
+							<a href="" ng-click="edit(value);" data-toggle="modal" data-target="#ViewPictureModal">
+								<i class="material-icons" data-toggle="tooltip" title="View">remove_red_eye </i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="clearfix padding-top-20">
+				<div class="col-sm-6" style="margin-top: 20px;">
+					<h5 ng-show="mydata.total_count > 0">Showing
+						<b>{{ pgShowing }}</b> of
+						<b>{{ mydata.total_count }}</b> records
+					</h5>
+				</div>
+				<dir-pagination-controls class="pagination pagination-sm col-sm-6" style="margin-top: 0px; text-align:right;" max-size="3"
+				 direction-links="true" boundary-links="true" on-page-change="mydata.getData(newPageNumber)">
+				</dir-pagination-controls>
+			</div>
+		</div>
+	</div>
+	<!-- add Modal HTML -->
+	<div id="addPicturesModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form ng-submit="insert();">
+					<div class="modal-header">
+						<h4 class="modal-title">Add Picture</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label>Comment</label>
+							<input type="text" ng-model="selectedData.pictureComment" name="comment" class="form-control" required>
+						</div>
+						<div class="form-group">
+							<label>Category</label>
+							<select class="form-control" ng-model="selectedData.pictureCategory" ng-options="item.category_id as item.name for item in categoryDropDown">
+								<option ng-selected="true" value="">None</option>
+							</select>
+						</div>
+						<div class="input-group mb-3">
+							<label>Upload</label>
+							<div>
+								<input id="myFile" file-model="myFile" type="file" class="btn btn-sm btn-primary" required>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="button" id="cancel" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" class="btn btn-success" value="Add">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Edit Modal HTML -->
+	<div id="editPicturesModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form ng-submit="update();" id="picEditForm">
+					<div class="modal-header">
+						<h4 class="modal-title">Edit Picture</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label>Comment</label>
+							<input type="text" ng-model="selectedData.comment" name="comment" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Name</label>
+							<input type="text" ng-model="selectedData.name" name="name" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Category</label>
+							<select class="form-control" ng-model="selectedData.category_id" ng-options="item.category_id as item.name for item in categoryDropDown">
+								<option ng-selected="true" value="">None</option>
+							</select>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" class="btn btn-info" value="Save">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Add to Album Modal -->
+	<div id="albumPicturesModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form ng-submit="addToAlbum();" id="albumPicturesForm">
+					<div class="modal-header">
+						<h4 class="modal-title">Add Picture to Album</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label>Existing Albums</label>
+							<div style="height:100px;setForCategoryModal" class="form-control pre-scrollable">
+								<ul ng-if="AlbumList.length > 0" class="padd-left-none">
+									<li ng-repeat="list in AlbumList" style="list-style: none;">{{ list.name }}</li>
+								</ul>
+								<h5 ng-if="AlbumList.length == 0">Not Added to any album</h5>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>Select Album</label>
+							<select required class="form-control" ng-model="selectedData.album_id" ng-options="item.album_id as item.name for item in AlbumDropDown">
+								<option ng-selected="true" value="">None</option>
+							</select>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" class="btn btn-info" value="Add">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Delete Modal HTML -->
+	<div id="deletePicturesModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form>
+					<div class="modal-header">
+						<h4 class="modal-title">Delete Picture</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+						<p>Are you sure you want to delete this Record?</p>
+						<p class="text-warning">
+							<small>This action cannot be undone.</small>
+						</p>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" ng-click="delete();" class="btn btn-danger" value="Delete">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="setForCategoryModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<form ng-submit="setForCategory();" id="setForCategoryForm">
+					<div class="modal-header">
+						<h4 class="modal-title">Set Picture for Category</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label>Category</label>
+							<select class="form-control" ng-model="selectedData.category_id" ng-options="item.category_id as item.name for item in categoryDropDown">
+								<option ng-selected="true" value="">None</option>
+							</select>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+						<input type="submit" class="btn btn-info" value="Save">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="ViewPictureModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<img class="img-responsive" src="/jumping_souls/{{ selectedData.path }}" />
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

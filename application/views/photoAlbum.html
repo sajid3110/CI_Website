@@ -1,0 +1,37 @@
+<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+<link href="Site/style/animate.css" rel="stylesheet" />
+<link href="Site/style/default.css" rel="stylesheet">
+<link href="Site/style/weddingpage.css" rel="stylesheet">
+<section id="weddinggallery" ng-init="getData('PhotoAlbumData')" style="padding-top: 180px; background-image:url('Site/images/bg.jpg');background-repeat:repeat; background-size:	cover;
+background-position:top left,center 0;background-attachment:fixed,fixed;">
+    <div class="text-center " id="weddingdiv">
+        <h2> {{ data.photoalbum_data.category | uppercase }} </h2>
+        <i class="fa fa-2x fa-angle-down cticon"></i>
+    </div>
+    <div >
+        <div class=" content-page ">
+            <div class=" row mix-grid ">
+                <div ng-repeat="d in data.photoalbum_data.data" class="col-md-6 col-sm-6  mix  " style="display: block;  opacity: 1;">
+                    <div ng-if="data.photoalbum_data.show_album == '1'" class="mix-inner">
+                        <img alt="" src="{{ d.path }}" class="img-responsive ">
+                        <div class="mix-details">
+                            <h3>{{ d.name | uppercase }}</h3>
+                            <a ng-click="" href="PhotoDetail/{{d.album_id}}" class="mix-link ">View More</a>
+                        </div>
+                        <!-- storeData(d.album_id,true) -->
+                    </div>
+                    <div ng-if="data.photoalbum_data.show_album != '1'" class="mix-inner">
+                        <img alt="" src="{{ d.path }}" class="img-responsive ">
+                    </div>
+                </div>
+                <div ng-if="data.photoalbum_data.data.length == '0'" style="text-align:center;">
+                    <h3>No Pictures Added</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#weddinggallery" class="back-to-top wow shake " data-wow-delay="0.4s">
+        <i class="fa  fa-chevron-up"></i>
+    </a>
+</section>
+<script src="Site/js/custom.js"></script>

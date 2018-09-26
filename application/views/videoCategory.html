@@ -1,0 +1,33 @@
+<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+<link href="Site/style/animate.css" rel="stylesheet" />
+<link href="Site/style/default.css" rel="stylesheet">
+<link href="Site/style/videocat.css" rel="stylesheet">
+<div id="page-top" data-spy="scroll" data-target=".navbar-custom" class="catp" ng-init="getData('VideoCategoryData')">
+    <section id="worksvideo" class=" section-padding" style="background-image:url('Site/images/bg.jpg');background-repeat:repeat; background-size:	cover;
+    background-position:top left,center 0;background-attachment:fixed,fixed;">
+        <div class="text-center" id="textheader">
+            <h2>Video's</h2>
+            <i class="fa fa-2x fa-angle-down cticon"></i>
+        </div>
+        <div id="categorygalley" >
+            <div class="container-fluid">
+                <div ng-repeat="d in data.videocategory_data" class=" col-md-6 col-sm-6 clearfix grid">
+                    <a href="VideoAlbum/{{ d.category_id }}">
+                        <figure class="effect-oscar  wowload fadeIn">
+                            <img src="{{ d.path }}" alt="img01"/>
+                            <figcaption>
+                                <h4>{{ d.name | uppercase }}</h4>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <a href="#worksvideo" class="back-to-top wow shake " data-wow-delay="0.4s">
+        <i class="fa  fa-chevron-up"></i>
+    </a>
+
+</div>
+<script src="Site/js/custom.js"></script>

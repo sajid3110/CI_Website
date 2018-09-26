@@ -1,0 +1,20 @@
+<div class="container-fluid login-div" ng-controller="PController">
+    <div style="text-align:center;">
+        <img class="img-responsive" src="/jumping_souls/Media/Misc/brand.jpg" />
+    </div>
+    <div class="row margin-top-20" ng-init="clearData();loginError = false;">
+        <form ng-submit="login();" method="post">
+            <input placeholder="Username" class="form-control" ng-model="selectedData.username" type="text" name="username" required/>
+            <br/>
+            <input placeholder="Password" class="form-control" ng-model="selectedData.password" type="password" name="password" required/>
+            <br/>
+            <input class="form-control btn btn-success" type="submit" value="Log in">
+        </form>
+        <!-- <span ng-if="loginError"> -->
+        <div ng-if="loginError" class="margin-top-20">
+            <span class="form-control alert alert-danger" style="padding:6px 12px 6px 12px !important;">
+                Wrong Credentials
+            </span>
+        </div>
+    </div>
+</div>
