@@ -48,22 +48,22 @@
       $(this).addClass("active");
     });
 
-    if($(window).width() <768)
-    {
-    console.log("click fn widht <768");
-
-    $(".navlogo").css("display","none");
-
-    $(".navbar-brand").css("display", "block");
-    // $(".navlogo").css("visibility", "hidden");
-    }
-
-    if($(window).width() >=768)
-     {
-       console.log("click fn widht >768");
-       $(".navlogo").css("display","inline-block");
-       $(".navbar-brand").css("display", "none");
-    }
+    // if($(window).width() <768)
+    // {
+    // console.log("click fn widht <768");
+    //
+    // $(".navlogo").css("display","none");
+    //
+    // $(".navbar-brand").css("display", "block");
+    // // $(".navlogo").css("visibility", "hidden");
+    // }
+    //
+    // if($(window).width() >=768)
+    //  {
+    //    console.log("click fn widht >768");
+    //    $(".navlogo").css("display","inline-block");
+    //    $(".navbar-brand").css("display", "none");
+    // }
   });
 
 	var navMain = $(".navbar-collapse");
@@ -96,7 +96,7 @@ $('#player').on('ended', function () {
 
 
 
-  
+
 
 
        // $.get("nav.html", function(data){
@@ -124,20 +124,20 @@ $('video').on('stop pause ended', function (e) {
     $("#intro").carousel();
 });
 
-$(window).load(function() {
-  
-      var viewportWidth = $(window).width();
-      if (viewportWidth < 768) {
-              $(".navbar").removeClass("navlogo").addClass("navbar-brand");
-      }
-  
-      $(window).resize(function () {
-  
-          if (viewportWidth < 768) {
-              $(".navbar").removeClass("navlogo").addClass("navbar-brand");
-          }
-      });
-  });
+// $(window).load(function() {
+//
+//       var viewportWidth = $(window).width();
+//       if (viewportWidth < 768) {
+//               $(".navbar").removeClass("navlogo").addClass("navbar-brand");
+//       }
+//
+//       $(window).resize(function () {
+//
+//           if (viewportWidth < 768) {
+//               $(".navbar").removeClass("navlogo").addClass("navbar-brand");
+//           }
+//       });
+//   });
 
 
 
@@ -221,4 +221,3 @@ if($(window).width() >=768)
   });
 }
 )(jQuery);
-
