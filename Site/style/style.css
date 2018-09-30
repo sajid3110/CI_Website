@@ -9,6 +9,48 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Montserrat:700|Merriweather:400italic');
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+.mu-opening-hour h2 {
+  border-bottom: 2px solid #FFA500;
+}
+
+.mu-opening-hour {
+  border: 2px solid #FFA500;
+}
+.mu-reservation-right {
+  background-color: #fff;
+  display: inline;
+  float: left;
+  /* margin-top: 40px; */
+  width: 100%;
+  padding: 10px;
+}
+.mu-opening-hour {
+  display: inline;
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+
+.mu-opening-hour h2 {
+  font-family: "Tangerine", cursive;
+  font-size: 50px;
+  margin: 10px 15px 20px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.mu-opening-hour ul li {
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.mu-opening-hour ul p{
+  color: #000;
+  margin-bottom: 0;
+  text-transform: none;
+  font-size: 14px;
+  font-weight: 600;
+}
 .navbar{
   position: absolute;
   top: 0;
@@ -257,6 +299,7 @@ ul.social-icons {
 {
 
   padding-top:10px;
+
 }
 address{
 
@@ -277,8 +320,12 @@ strong{
   color: #333;
 }
 #contactus{
-background-color: #E5E5E5;
-
+/* background-color: #E5E5E5; */
+background-image:				url('http://localhost/jumping_souls/Site/images/banner.jpg');
+background-repeat:		repeat,								no-repeat;
+background-size:							cover;
+background-position: 	top left,							center 0;
+background-attachment:	fixed,								fixed;
 }
 
 
@@ -740,7 +787,7 @@ hr {
 .boxed-grey {
 	/* background: #000000; */
   	background: #ffc20e;
-	padding: 20px;
+	padding: 12px;
 }
 
 .team h5 {
@@ -1288,7 +1335,11 @@ background-repeat: no-repeat;
 
 @media (max-width:1024px) {
 
+  #emailid{
+  font-weight: 600;
+  font-size: 11px;
 
+  }
   .carousel{height:100%;}
   .carousel-inner{height:100vh;
 
@@ -1311,6 +1362,11 @@ object-fit:cover;
 
 
   @media (min-width:1025px) {
+    #emailid{
+  font-weight: 600;
+    font-size: 14px;
+
+    }
 
     .carousel,.item,.active{height:100%;}
     .carousel-inner{height:100vh;}
