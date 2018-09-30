@@ -5,8 +5,9 @@
 #textheader{
 
 
-	padding-bottom: 17%;
-	padding-top: 10%;
+	/* padding-bottom: 17%;
+	padding-top: 10%; */
+	  padding: 14em 0 0 0;
 	color: white;
 }
 #works{
@@ -54,8 +55,8 @@ width: 25%;
   color: #333;
 }
 #categorygalley{
+padding-top: 4.5em;
 
-margin-top: 5%;
 	/* margin-top: 5%; */
 }
 .grid {

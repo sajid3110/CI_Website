@@ -94,7 +94,7 @@
       .story-content p
       {
 
-    font-size: 25px;
+    font-size: 18px;
       }
 
 
@@ -131,6 +131,10 @@
         		  width: 100vw;
         		  height: 100%;
         		  object-fit: contain;
+          }
+          hr{
+
+            margin-top:10%;
           }
   }
   	  @media (min-width: 1201px) {

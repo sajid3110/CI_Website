@@ -163,12 +163,18 @@ padding-right:  8%;
     .story-content p
     {
 
-  font-size: 25px;
+  font-size: 18px;
     }
 
 
   }
+  @media (min-width: 700px) and (max-width: 800px) {
+#wedimg h1{
 
+
+	font-size: 40px;
+}
+	}
 
 
 	  @media (min-width: 1025px) {

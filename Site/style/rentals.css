@@ -89,6 +89,7 @@
           {
               font-size: 40px;
               letter-spacing: 8px;
+              text-align: center;
           }
 
           h3
@@ -380,7 +381,7 @@
               text-align: center;
               margin: 0;
           /* margin-bottom:10%; */
-              padding: 14em 0 14em 0;
+              padding: 14em 0 0 0;
               cursor: default;
           }
 
