@@ -1,0 +1,36 @@
+<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+<link href="Site/style/animate.css" rel="stylesheet" />
+<link href="Site/style/default.css" rel="stylesheet">
+<link href="Site/style/360.css" rel="stylesheet">
+<section id="360playersection"  ng-init="getData('VideoDetailData',false,true)"  style="width: 100%;
+ min-height:100vh;
+position: relative;
+padding-bottom: 10%;">
+        <!-- <h1 style="text-align:center;">{{ data.videodetail_data[0].album_name }}</h1> -->
+
+
+    <div id="videoplayer">
+        <!-- <div id="playerholder" style="padding:56.25% 0 0 0;position:relative;">
+            <iframe src="{{ data.videodetail_data.link }}" style="position:absolute;top:0;left:0;" frameborder="0" webkitallowfullscreen
+                mozallowfullscreen allowfullscreen>
+            </iframe>
+        </div> -->
+        <script src="https://360player.io/static/dist/scripts/embed.js" async></script>
+<iframe src="https://360player.io/p/ubyhhc/" frameborder="0" width=560 height=315 allowfullscreen data-token="ubyhhc"></iframe>
+    </div>
+    <!-- <hr style="width:80%;height:1px;background-color:black;" /> -->
+    <div id="story" class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="story-content ">
+                    <p>
+                        {{ data.videodetail_data[0].album_comment }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<a href="#360playersection" class="back-to-top wow shake " data-wow-delay="0.4s"><i class="fa  fa-chevron-up"></i></a>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script src="Site/js/custom.js"></script>
