@@ -2,12 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
-	
+
 	public function index()
 	{
 		$this->load->helper('url');
 		$this->load->view('index');
-	}	
+	}
 
 	public function home_page(){
 		$this->load->view('homepage.html');
@@ -43,6 +43,9 @@ class Welcome extends CI_Controller {
 
 	public function faq_page(){
 		$this->load->view('faq.html');
+	}
+	public function aboutus_page(){
+		$this->load->view('aboutus.html');
 	}
 
 	public function homepage_data(){

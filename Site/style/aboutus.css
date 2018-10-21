@@ -1,0 +1,178 @@
+#header
+{
+    position: relative;
+    color: #000;
+    text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
+    text-align: center;
+    margin: 0;
+/* margin-bottom:10%; */
+    padding: 14em 0 0 0;
+    cursor: default;
+}
+
+#header header h1
+{
+    font-weight: 600;
+    font-size: 70px;
+    letter-spacing: 10px;
+    text-transform: none;
+}
+.desc-text {
+
+    color: #393939;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.desc-text + .desc-text {
+    margin-top: 20px;
+}
+
+@media (min-width: 1000px) and (max-width:1025px)
+{
+
+.image{
+
+
+  padding-top: 4%;
+}
+.desc-text {
+
+
+
+font-size: 15px;
+}
+}
+
+@media (max-width: 1000px)
+{
+.desc-text {
+
+
+
+  padding-top: 2%;
+}
+}
+@media (max-width: 1200px)
+{
+#header header h1 {
+    font-size: 30px;
+    letter-spacing: 6px;
+}
+}
+
+
+
+            #header header
+            {
+                display: inline-block;
+                padding: 0 0 4.5em 0;
+            }
+
+            header
+            {
+                margin-bottom: 1em;
+            }
+
+
+
+            #fh5co-team {
+  /* background: #1a1b1e;!important; */
+}
+#fh5co-team .team-box {
+  position: relative;
+  padding: 30px;
+  padding-top: 2em;
+  background: #fff; 
+   background: #18181c;
+
+  float: left;
+  width: 100%;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 992px) {
+  #fh5co-team .team-box {
+    margin-bottom: 40px;
+  }
+}
+#fh5co-team .team-box .user {
+  position: relative;
+  margin-bottom: 20px;
+}
+#fh5co-team .team-box .user img {
+  width: 147px;
+  height: 147px;
+  margin-bottom: 0;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+#fh5co-team .team-box h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: none;
+}
+
+
+
+.about-content span {
+    width: 30px;
+    height: 2px;
+    background-color: #bebebe;
+    margin: 0 auto 30px;
+    display: block;
+}
+
+.about-content h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px)
+{
+
+
+  .about-content h2 {
+      margin-bottom: 30px;
+      font-size: 20px;
+  }
+}
+
+
+.about-me-area.mt-100
+   {
+        margin-top: 70px;
+    }
+
+    .mt-100 {
+    margin-top: 100px;
+}
+
+.section_padding_100 {
+    padding: 100px 0;
+}
+
+.mb-100 {
+    margin-bottom: 100px;
+}
+
+.single-service-area img {
+    margin-bottom: 50px;
+}
+
+.single-service-area h5 {
+    margin-bottom: 20px;
+}
+.section_padding_0_100 {
+    padding: 0 0 100px;
+}

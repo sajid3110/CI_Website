@@ -50,8 +50,11 @@ mySiteApp.config(function ($routeProvider,$locationProvider) {
         .when("/Homepage", {
             templateUrl: "index.php/welcome/home_page"
         })
+        .when("/Aboutus", {
+            templateUrl: "index.php/welcome/aboutus_page",
+        })
         .when("/", {
             templateUrl: "index.php/welcome/home_page"
         })
-        
+
 });

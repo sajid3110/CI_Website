@@ -85,7 +85,7 @@
 					</li>
 
 					<li>
-							<a id="whitetext">about</a>
+							<a href="Aboutus" id="whitetext">about</a>
 						  </li>
 						  <li class="dropdown">
 							<a id="whitetext" href="#" class="dropdown-toggle" data-toggle="dropdown">Our Work
