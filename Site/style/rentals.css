@@ -71,12 +71,14 @@
         p{
 
             font-size: 20px;
+            color: #bdbdbd;
         }
           h1,h2,h3,h4,h5,h6
           {
               font-weight: 400;
               text-transform: none;
               line-height: 1.75em;
+
           }
 
               h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
@@ -90,6 +92,7 @@
               font-size: 40px;
               letter-spacing: 8px;
               text-align: center;
+                color: #bdbdbd;
           }
 
           h3
@@ -298,8 +301,9 @@
 
                   .box.style1
                   {
-                      background: #fff;
+                      /* background: #fff; */
                       padding: 3em;
+
                   }
 
                       .box.style1 .image
