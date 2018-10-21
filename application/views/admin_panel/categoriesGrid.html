@@ -49,7 +49,7 @@
 						<td class="col-sm-6">{{ value.name }}</td>
 						<td class="col-sm-2">
 							<span ng-if="value.show_album != '0'">Album</span>
-							<span ng-if="value.show_album == '0'">Picture</span>
+							<span ng-if="value.show_album == '0'">Single</span>
 						</td>
 						<td class="col-sm-2">
 							<span ng-if="value.thumbnail == null">Not Selected</span>
@@ -120,7 +120,7 @@
 							<label>View Mode</label>
 							<select class="form-control" ng-model="selectedData.show_album">
 								<option value="1">Album</option>
-								<option value="0">Picture</option>
+								<option value="0">Single</option>
 							</select>
 						</div>
 					</div>

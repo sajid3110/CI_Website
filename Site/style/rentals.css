@@ -381,20 +381,21 @@
               text-align: center;
               margin: 0;
           /* margin-bottom:10%; */
-              padding: 14em 0 0 0;
+              /* padding: 14em 0 0 0; */
               cursor: default;
           }
 
               #header header
               {
                   display: inline-block;
-                  padding: 0 0 4.5em 0;
+                  /* padding: 0 0 4.5em 0; */
               }
 
                   #header header h1
                   {
                       font-weight: 600;
-                      font-size: 70px;
+                      /* font-size: 70px; */
+                      font-size: 3em;
                       letter-spacing: 10px;
                   }
 

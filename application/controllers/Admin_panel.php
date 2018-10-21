@@ -520,7 +520,13 @@ class Admin_panel extends CI_Controller {
 
     public function delete_albums(){
         $this->load->model('albums');
+        $this->load->model('pictures');
+        $this->load->model("videos");
+
         $data = json_decode($this->input->post('data'));
+
+        $this->pictures->delete_album_picture(array("album_id" => $data->album_id));
+        $this->videos->delete_album_video(array("album_id" => $data->album_id));
 
         $res = $this->albums->delete($data->album_id);
         $resp = new stdClass();

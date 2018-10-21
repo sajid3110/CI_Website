@@ -15,14 +15,15 @@
       text-align: center;
       margin: 0;
   /* margin-bottom:10%; */
-      padding: 14em 0 0 0;
+      /* padding: 14em 0 0 0; */
       cursor: default;
   }
 
   #header header h1
   {
       font-weight: 600;
-      font-size: 70px;
+      /* font-size: 70px; */
+      font-size: 3em;
       letter-spacing: 10px;
       text-transform: none;
   }
@@ -37,7 +38,8 @@ details[open] >summary
     width: 75%;
     min-height: 5px;
     max-width: 700px;
-    padding: 45px 70px 45px 45px;
+    /* padding: 45px 70px 45px 45px; */
+    padding: 1em;
     margin: 0 auto;
     position: relative;
     font-size: 22px;
@@ -134,7 +136,8 @@ details[open] >summary
   @media (max-width: 1200px)
   {
   #header header h1 {
-      font-size: 30px;
+      /* font-size: 30px; */
+      font-size: 3em;
       letter-spacing: 6px;
   }
 }

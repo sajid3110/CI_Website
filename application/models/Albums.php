@@ -190,11 +190,12 @@ class Albums extends CI_Model
 
      public function get_videodetail_page_data($id){
         $res = [];
-        $this->db->select("video.*, p.path as master_pic, album.name as album_name, album.comment as album_comment");
+        $this->db->select("video.*, p.path as master_pic, album.name as album_name, album.comment as album_comment, category.name as category");
         $this->db->from("album");
         $this->db->join("album_video", "album.album_id = album_video.album_id");
         $this->db->join("video", "video.video_id = album_video.video_id");
         $this->db->join("picture p", "p.picture_id = album.master_pic");
+        $this->db->join("category", "category.category_id = album.category_id");
         $this->db->where("album.album_id", $id);
         
         $query = $this->db->get();

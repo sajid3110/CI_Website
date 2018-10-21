@@ -47,7 +47,7 @@ app.factory('coService', function ($http, $location) {
             });
             var fd = new FormData();
             if (file != undefined) {
-                if (file.length > 1) {
+                if (file.length != undefined) {
                     for (var i = 0; i < file.length; i++) {
                         fd.append('file[]', file[i]);
                     }
