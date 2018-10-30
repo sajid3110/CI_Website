@@ -71,7 +71,7 @@
         p{
 
             font-size: 20px;
-            color: #bdbdbd;
+            color: #eeeeee;
         }
           h1,h2,h3,h4,h5,h6
           {
@@ -92,7 +92,7 @@
               font-size: 40px;
               letter-spacing: 8px;
               text-align: center;
-                color: #bdbdbd;
+                color: #e0e0e0;
           }
 
           h3
@@ -380,7 +380,7 @@
           #header
           {
               position: relative;
-              color: #fff;
+              color: #e0e0e0;
               text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
               text-align: center;
               margin: 0;
@@ -400,7 +400,7 @@
                       font-weight: 600;
                       /* font-size: 70px; */
                       font-size: 3em;
-                      letter-spacing: 10px;
+                      /* letter-spacing: 10px; */
                   }
 
                   #header header p
