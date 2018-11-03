@@ -7,7 +7,7 @@
 
 <head>
 	<!--Start of Zendesk Chat Script-->
-	<!-- <script type="text/javascript">
+	<script type="text/javascript">
 		window.$zopim || (function (d, s) {
 			var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
 				d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
@@ -17,7 +17,7 @@
 			$.src = "https://v2.zopim.com/?5yd0oPsWPUYIJKtcNw2bQTdgqmEPGPLx"; z.t = +new Date; $.
 				type = "text/javascript"; e.parentNode.insertBefore($, e)
 		})(document, "script");
-	</script> -->
+	</script>
 	<!--End of Zendesk Chat Script-->
 	<meta fragment="" content="!" />
 	<base href="http://localhost/jumping_souls/" />
