@@ -3,7 +3,7 @@
 <link href="Site/style/default.css" rel="stylesheet">
 <link href="Site/style/rentals.css" rel="stylesheet">
 <link href="Site/style/rental-mobile.css" rel="stylesheet">
-<section id="rentalssection" class="section-padding" style="background-image:url('Site/images/bg.jpg');background-repeat:repeat; background-size:	cover;
+<section id="rentalssection" style="background-image:url('Site/images/bg.jpg');background-repeat:repeat; background-size:	cover;
 background-position:top left,center 0;background-attachment:fixed,fixed;" ng-init="getData('RentalData')">
     <div id="header">
         <header>
@@ -11,7 +11,8 @@ background-position:top left,center 0;background-attachment:fixed,fixed;" ng-ini
             <i class="fa fa-2x fa-angle-down cticon"></i>
         </header>
     </div>
-    <article ng-repeat="d in data.rental_data" id="first" class="container box style1 right rental-container">
+    <article ng-repeat="d in data.rental_data" id="first" class="container box style1 right rental-container" style="    background-image:url('Site/images/bg5.jpg');background-repeat:repeat;
+        background-position:top left,center 0;background-attachment:fixed,fixed;">
         <a href="#" class="image fit">
             <img src="{{ d.path }}" alt="" />
         </a>

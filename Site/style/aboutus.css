@@ -1,7 +1,7 @@
 #header
 {
     position: relative;
-    color: #000;
+    color: #e0e0e0;
     text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
     text-align: center;
     margin: 0;
@@ -9,18 +9,45 @@
     padding: 10em 0 0 0;
     cursor: default;
 }
+#note{
 
+  font-weight:bold;
+
+}
+p{
+
+
+  color: #eeeeee;
+  font-weight: 500;
+}
+
+h3{
+
+
+  color: #ffb300;
+}
+h2{
+  color: #e0e0e0;
+
+
+
+}
+
+h4{
+
+  color: #ffb300;
+}
 #header header h1
 {
     font-weight: 600;
     /* font-size: 70px; */
     font-size: 3em;
-    letter-spacing: 10px;
+    /* letter-spacing: 10px; */
     text-transform: none;
 }
 .desc-text {
 
-    color: #393939;
+    color: #eeeeee;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 1px;
@@ -86,8 +113,8 @@ font-size: 15px;
   position: relative;
   padding: 30px;
   padding-top: 2em;
-  background: #fff; 
-   background: #18181c;
+  /* background: #fff;
+   background: #18181c; */
 
   float: left;
   width: 100%;

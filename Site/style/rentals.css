@@ -71,12 +71,14 @@
         p{
 
             font-size: 20px;
+            color: #eeeeee;
         }
           h1,h2,h3,h4,h5,h6
           {
               font-weight: 400;
               text-transform: none;
               line-height: 1.75em;
+
           }
 
               h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
@@ -90,6 +92,7 @@
               font-size: 40px;
               letter-spacing: 8px;
               text-align: center;
+                color: #e0e0e0;
           }
 
           h3
@@ -298,8 +301,9 @@
 
                   .box.style1
                   {
-                      background: #fff;
+                      /* background: #fff; */
                       padding: 3em;
+
                   }
 
                       .box.style1 .image
@@ -376,12 +380,12 @@
           #header
           {
               position: relative;
-              color: #fff;
+              color: #e0e0e0;
               text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
               text-align: center;
               margin: 0;
           /* margin-bottom:10%; */
-              /* padding: 14em 0 0 0; */
+              padding: 10em 0 0 0;
               cursor: default;
           }
 
@@ -396,7 +400,7 @@
                       font-weight: 600;
                       /* font-size: 70px; */
                       font-size: 3em;
-                      letter-spacing: 10px;
+                      /* letter-spacing: 10px; */
                   }
 
                   #header header p

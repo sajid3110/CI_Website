@@ -10,12 +10,12 @@
   #header
   {
       position: relative;
-      color: #fff;
+      color: #e0e0e0;
       text-shadow: 0 0 0.5px rgba(255,255,255,0.25);
       text-align: center;
       margin: 0;
   /* margin-bottom:10%; */
-      /* padding: 14em 0 0 0; */
+          padding: 10em 0 0 0;
       cursor: default;
   }
 
@@ -24,7 +24,7 @@
       font-weight: 600;
       /* font-size: 70px; */
       font-size: 3em;
-      letter-spacing: 10px;
+      /* letter-spacing: 10px; */
       text-transform: none;
   }
 
