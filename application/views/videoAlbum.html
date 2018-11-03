@@ -12,15 +12,15 @@ background-position:top left,center 0;background-attachment:fixed,fixed;">
         <div class=" content-page ">
             <div class=" row mix-grid ">
                 <div ng-repeat="d in data.videoalbum_data.data" class="col-md-6 col-sm-6  mix  " style="display: block;  opacity: 1;">
-                    <div ng-if="data.videoalbum_data.show_album == '1'" class="mix-inner">
-                        <img alt="" src="{{ d.path }}" class="img-responsive ">
+                    <div ng-if="data.videoalbum_data.show_album == '1'" class="mix-inner" style="height: 30em;">
+                        <img alt="" src="{{ d.path }}" class="img-responsive " style="height: 100%; width: 100%;">
                         <div class="mix-details">
                             <h3>{{ d.name | uppercase }}</h3>
                             <a href="VideoDetail/{{d.album_id}}" class="mix-link ">Watch Video</a>
                         </div>
                     </div>
-                    <div ng-if="data.videoalbum_data.show_album != '1'" class="mix-inner">
-                        <img alt="" src="{{ d.path }}" class="img-responsive ">
+                    <div ng-if="data.videoalbum_data.show_album != '1'" class="mix-inner" style="height: 30em;">
+                        <img alt="" src="{{ d.path }}" class="img-responsive " style="height: 100%; width: 100%;">
                     </div>
                 </div>
                 <div ng-if="data.videoalbum_data.data.length == '0'" style="text-align:center;">

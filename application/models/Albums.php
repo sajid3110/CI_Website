@@ -125,16 +125,38 @@ class Albums extends CI_Model
 
      public function get_picalbum_page_data($id){
         $res = new stdClass();
-        $this->db->select("album.*, picture.path, category.name as category_name");
-        $this->db->from("album");
-        $this->db->join("category", "album.category_id = category.category_id","left outer");
-        $this->db->join("picture", "picture.picture_id = album.master_pic", "left outer");
-        $this->db->where("category.category_id", $id);
-        
+        $this->db->select('show_album');
+        $this->db->from('category');
+        $this->db->where('category_id', $id);
+
         $query = $this->db->get();
         if($query){
-            $res->data = $query->result();
-        }  
+            $a = $query->result();
+        }
+
+        if($a[0]->show_album == "1"){
+            $this->db->select("album.*, picture.path, category.name as category_name");
+            $this->db->from("album");
+            $this->db->join("category", "album.category_id = category.category_id");
+            $this->db->join("picture", "picture.picture_id = album.master_pic");
+            $this->db->where("category.category_id", $id);
+            
+            $query = $this->db->get();
+            if($query){
+                $res->data = $query->result();
+            }
+        } else {
+            $this->db->select('*');
+            $this->db->from("picture");
+            $this->db->join("category", "picture.category_id = category.category_id");
+            $this->db->where("category.category_id", $id);
+
+            $query = $this->db->get();
+            if($query){
+                $res->data = $query->result();
+            }
+        }
+          
         $this->db->select("name,show_album");
         $this->db->from("category");
         $this->db->where("category_id", $id);  

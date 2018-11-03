@@ -66,6 +66,7 @@ padding-top: 4.5em;
 	list-style: none;
 	padding-bottom:  1px;
 	text-align: center;
+	height: 30em;
 
 }
 
@@ -75,11 +76,11 @@ padding-top: 4.5em;
 	float: left;
 	overflow: hidden;
 	margin: 0;	/*change here for spacing*/
-	max-width: 100%;
+	width: 100%;
 	text-align: center;
 	cursor: pointer;
-	width: 800px;
-	height: auto;/*rishi did 29.6em*/
+	/* width: 800px; */
+	height: max-content;/*rishi did 29.6em*/
 		margin-bottom: 5%;
 
 }
